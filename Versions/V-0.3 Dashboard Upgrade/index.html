@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BodyStats — Fitness Tracker</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Mobile sidebar overlay -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <div class="app-layout">
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-logo">
+        <span class="logo-mark">◉</span>
+        <span class="logo-text">BodyStats</span>
+      </div>
+
+      <nav class="sidebar-nav">
+        <button class="nav-item active" data-section="dashboard">
+          <span class="nav-icon">⊞</span><span>Dashboard</span>
+        </button>
+        <button class="nav-item" data-section="measurements">
+          <span class="nav-icon">✏</span><span>Measurements</span>
+        </button>
+        <button class="nav-item" data-section="analytics">
+          <span class="nav-icon">◎</span><span>Analytics</span>
+        </button>
+        <button class="nav-item" data-section="goals">
+          <span class="nav-icon">◈</span><span>Goals</span>
+        </button>
+        <button class="nav-item" data-section="achievements">
+          <span class="nav-icon">★</span><span>Achievements</span>
+        </button>
+        <button class="nav-item" data-section="history">
+          <span class="nav-icon">☰</span><span>History</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">All data stored locally in your browser</div>
+    </aside>
+
+    <!-- ===== MAIN WRAP ===== -->
+    <div class="main-wrap">
+
+      <!-- Mobile top bar -->
+      <div class="mobile-topbar">
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+        <span class="mobile-title">BodyStats</span>
+        <span></span>
+      </div>
+
+      <!-- ─────────────────────────────────────
+           SECTION: DASHBOARD
+      ───────────────────────────────────────── -->
+      <section class="page active" id="section-dashboard">
+        <div class="page-header">
+          <div>
+            <h1 class="page-title">Dashboard</h1>
+            <p class="page-subtitle">Your physique overview at a glance</p>
+          </div>
+          <button class="btn btn-primary" id="dash-new-entry-btn">+ New Entry</button>
+        </div>
+
+        <!-- Key stats strip -->
+        <div class="stats-strip" id="dashboard-stats-bar">
+          <!-- Injected by JS -->
+        </div>
+
+        <!-- Current physique cards -->
+        <div class="section-label">Current Physique</div>
+        <div class="physique-grid" id="dashboard-physique-grid">
+          <!-- Injected by JS -->
+        </div>
+
+        <!-- Progress overview row -->
+        <div class="section-label">Progress Overview</div>
+        <div class="overview-grid" id="dashboard-overview">
+          <!-- Injected by JS -->
+        </div>
+      </section>
+
+      <!-- ─────────────────────────────────────
+           SECTION: MEASUREMENTS  (all existing IDs preserved)
+      ───────────────────────────────────────── -->
+      <section class="page" id="section-measurements">
+        <div class="page-header">
+          <div>
+            <h1 class="page-title">Measurements</h1>
+            <p class="page-subtitle">Log your body stats</p>
+          </div>
+        </div>
+
+        <!-- Entry Form — preserved exactly -->
+        <div class="card">
+          <h2 class="card-title">New Entry</h2>
+          <form id="entry-form">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" required />
+              </div>
+              <div class="form-group">
+                <label for="height">Height (cm)</label>
+                <input type="number" id="height" name="height" step="0.1" min="0" required />
+              </div>
+              <div class="form-group">
+                <label for="weight">Weight (kg)</label>
+                <input type="number" id="weight" name="weight" step="0.1" min="0" required />
+              </div>
+              <div class="form-group">
+                <label for="shoulders">Shoulders (cm)</label>
+                <input type="number" id="shoulders" name="shoulders" step="0.1" min="0" />
+              </div>
+              <div class="form-group">
+                <label for="chest">Chest (cm)</label>
+                <input type="number" id="chest" name="chest" step="0.1" min="0" />
+              </div>
+              <div class="form-group">
+                <label for="waist">Waist (cm)</label>
+                <input type="number" id="waist" name="waist" step="0.1" min="0" required />
+              </div>
+              <div class="form-group">
+                <label for="hips">Hips (cm)</label>
+                <input type="number" id="hips" name="hips" step="0.1" min="0" />
+              </div>
+              <div class="form-group">
+                <label for="biceps">Biceps (cm)</label>
+                <input type="number" id="biceps" name="biceps" step="0.1" min="0" />
+              </div>
+              <div class="form-group">
+                <label for="forearms">Forearms (cm)</label>
+                <input type="number" id="forearms" name="forearms" step="0.1" min="0" />
+              </div>
+              <div class="form-group">
+                <label for="thighs">Thighs (cm)</label>
+                <input type="number" id="thighs" name="thighs" step="0.1" min="0" />
+              </div>
+              <div class="form-group">
+                <label for="calves">Calves (cm)</label>
+                <input type="number" id="calves" name="calves" step="0.1" min="0" />
+              </div>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Save Entry</button>
+              <button type="button" id="clear-form" class="btn btn-secondary">Clear</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Latest Results — preserved ID -->
+        <div class="card" id="results-section" hidden>
+          <h2 class="card-title">Latest Ratios</h2>
+          <div class="results-grid" id="results-grid"></div>
+        </div>
+
+        <!-- Progress Since Last Entry — preserved ID -->
+        <div class="card" id="progress-section" hidden>
+          <h2 class="card-title">Progress Since Last Entry</h2>
+          <div class="results-grid" id="progress-grid"></div>
+        </div>
+      </section>
+
+      <!-- ─────────────────────────────────────
+           SECTION: ANALYTICS
+      ───────────────────────────────────────── -->
+      <section class="page" id="section-analytics">
+        <div class="page-header">
+          <div>
+            <h1 class="page-title">Analytics</h1>
+            <p class="page-subtitle">Key body composition ratios and health indicators</p>
+          </div>
+        </div>
+        <div id="analytics-content"><!-- Injected by JS --></div>
+      </section>
+
+      <!-- ─────────────────────────────────────
+           SECTION: GOALS
+      ───────────────────────────────────────── -->
+      <section class="page" id="section-goals">
+        <div class="page-header">
+          <div>
+            <h1 class="page-title">Goals</h1>
+            <p class="page-subtitle">Set targets and track your progress</p>
+          </div>
+        </div>
+
+        <div class="goals-layout">
+          <div class="card">
+            <h2 class="card-title">Set Your Targets</h2>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="goal-weight">Target Weight (kg)</label>
+                <input type="number" id="goal-weight" step="0.1" min="0" placeholder="e.g. 80" />
+              </div>
+              <div class="form-group">
+                <label for="goal-shoulders">Target Shoulders (cm)</label>
+                <input type="number" id="goal-shoulders" step="0.1" min="0" placeholder="e.g. 120" />
+              </div>
+              <div class="form-group">
+                <label for="goal-chest">Target Chest (cm)</label>
+                <input type="number" id="goal-chest" step="0.1" min="0" placeholder="e.g. 100" />
+              </div>
+              <div class="form-group">
+                <label for="goal-waist">Target Waist (cm)</label>
+                <input type="number" id="goal-waist" step="0.1" min="0" placeholder="e.g. 75" />
+              </div>
+            </div>
+            <div class="form-actions">
+              <button type="button" id="save-goals-btn" class="btn btn-primary">Save Goals</button>
+            </div>
+          </div>
+
+          <div id="goals-progress"><!-- Injected by JS --></div>
+        </div>
+      </section>
+
+      <!-- ─────────────────────────────────────
+           SECTION: ACHIEVEMENTS
+      ───────────────────────────────────────── -->
+      <section class="page" id="section-achievements">
+        <div class="page-header">
+          <div>
+            <h1 class="page-title">Achievements</h1>
+            <p class="page-subtitle">Milestones you've reached on your journey</p>
+          </div>
+        </div>
+        <div class="achievements-grid" id="achievements-grid"><!-- Injected by JS --></div>
+      </section>
+
+      <!-- ─────────────────────────────────────
+           SECTION: HISTORY  (all existing IDs preserved)
+      ───────────────────────────────────────── -->
+      <section class="page" id="section-history">
+        <div class="page-header">
+          <div>
+            <h1 class="page-title">History</h1>
+            <p class="page-subtitle">Every entry you've logged</p>
+          </div>
+          <button type="button" id="clear-history" class="btn btn-danger-outline">Clear All</button>
+        </div>
+
+        <div class="card">
+          <div class="table-wrapper">
+            <table id="history-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Weight</th>
+                  <th>BMI</th>
+                  <th>Waist/Ht</th>
+                  <th>Sh/Waist</th>
+                  <th>Ch/Waist</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="history-body"></tbody>
+            </table>
+          </div>
+          <p id="empty-message" class="empty-message">No entries yet. Head to Measurements to add your first entry.</p>
+        </div>
+      </section>
+
+    </div><!-- /.main-wrap -->
+  </div><!-- /.app-layout -->
+
+  <script src="js/script.js"></script>
+</body>
+</html>
