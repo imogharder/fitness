@@ -1025,6 +1025,24 @@ button { font-family: var(--font-sans); }
   .versions-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .hero {
+    padding: calc(var(--nav-h) + 4rem) 0 5rem;
+  }
+
+  .hero-orb--a {
+    width: 520px;
+    height: 380px;
+    top: -90px;
+  }
+
+  .hero-title {
+    font-size: clamp(2.8rem, 12vw, 5.5rem);
+  }
+
+  .hero-subtitle {
+    max-width: 95%;
+  }
 }
 
 /* ── Nav collapses at 768px ── */
@@ -1033,34 +1051,245 @@ button { font-family: var(--font-sans); }
   .nav-actions { display: none; }
   .hamburger  { display: flex; }
 
-  .hero-orb--a { width: 360px; height: 280px; }
-  .hero-orb--b { display: none; }
+  .nav-inner {
+    padding: 0 1rem;
+    gap: 1rem;
+  }
 
-  --section-gap: 5rem;
+  .hero {
+    min-height: auto;
+    padding: calc(var(--nav-h) + 3rem) 0 4rem;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .hero .container {
+    align-items: flex-start;
+  }
+
+  .hero-title {
+    font-size: clamp(2.4rem, 12vw, 4.2rem);
+    line-height: 0.96;
+  }
+
+  .hero-subtitle {
+    margin-bottom: 2rem;
+  }
+
+  .hero-orb--a {
+    width: 360px;
+    height: 280px;
+  }
+
+  .hero-orb--b {
+    display: none;
+  }
+
+  :root {
+    --section-gap: 5rem;
+  }
+
+  .versions-grid {
+    gap: 0.95rem;
+  }
+
+  .version-card {
+    padding: 1.3rem;
+  }
+
+  .card-footer {
+    gap: 0.65rem;
+  }
+
+  .card-actions {
+    flex-direction: column;
+  }
+
+  .card-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
 
   .about-card {
     padding: 1.75rem 1.5rem;
+  }
+
+  .footer-inner {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-right {
+    width: 100%;
+  }
+
+  .footer-right {
+    text-align: center;
   }
 }
 
 /* ── Mobile ── */
 @media (max-width: 560px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .nav {
+    position: fixed;
+    width: 100%;
+  }
+
+  .nav-inner {
+    padding: 0 0.85rem;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .nav-logo {
+    flex: 1 1 100%;
+  }
+
   .versions-grid {
     grid-template-columns: 1fr;
   }
 
+  .hero {
+    padding: calc(var(--nav-h) + 2.2rem) 0 3rem;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .hero .container {
+    align-items: flex-start;
+  }
+
   .hero-title {
+    font-size: clamp(2rem, 16vw, 3.4rem);
     letter-spacing: -0.04em;
+    text-align: left;
+    max-width: 100%;
+  }
+
+  .hero-subtitle {
+    max-width: 100%;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
   }
 
   .hero-progress {
+    width: 100%;
     max-width: 100%;
+  }
+
+  .hero-orb--a {
+    width: 220px;
+    height: 170px;
+    top: -60px;
+  }
+
+  .hero-orb--b {
+    display: none;
+  }
+
+  .version-card {
+    padding: 1rem;
+  }
+
+  .version-card::after {
+    font-size: 2.8rem;
+    right: 0.5rem;
+  }
+
+  .card-top {
+    gap: 0.35rem;
+  }
+
+  .card-name {
+    font-size: 0.95rem;
+  }
+
+  .card-desc {
+    font-size: 0.81rem;
+    line-height: 1.65;
+  }
+
+  .card-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .card-actions .btn {
+    width: 100%;
+  }
+
+  .card-date {
+    font-size: 0.7rem;
+  }
+
+  .roadmap-step,
+  .roadmap-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .roadmap-step {
+    gap: 0.9rem;
+  }
+
+  .about-card {
+    padding: 1.6rem 1rem;
   }
 
   .footer-inner {
     flex-direction: column;
     align-items: flex-start;
+    gap: 0.5rem;
   }
 
-  .section { padding: 4.5rem 0; }
+  .footer-right {
+    width: 100%;
+    text-align: left;
+  }
+
+  .section {
+    padding: 4rem 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero {
+    padding: calc(var(--nav-h) + 2rem) 0 2.8rem;
+  }
+
+  .hero-title {
+    font-size: clamp(1.9rem, 18vw, 3rem);
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .card-desc {
+    font-size: 0.8rem;
+  }
+
+  .btn-sm {
+    padding: 0.38rem 0.75rem;
+  }
+
+  .nav-actions,
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .footer-copy {
+    font-size: 0.75rem;
+  }
 }
