@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore every version of Body Stats Tracker — from the initial prototype to the final V1.0 fitness platform." />
+  <title>Body Stats Tracker — All Versions</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       NAVIGATION
+  ════════════════════════════════════════════ -->
+  <header class="nav" id="nav" role="banner">
+    <div class="nav-inner">
+
+      <a href="#" class="nav-logo" aria-label="Body Stats Tracker home">
+        Body Stats Tracker
+      </a>
+
+      <!-- Desktop links -->
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#versions">Versions</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#about">About</a>
+      </nav>
+
+      <!-- GitHub — desktop -->
+      <div class="nav-actions">
+        <a
+          href="https://github.com"
+          class="btn btn-ghost btn-sm"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="View source on GitHub"
+        >
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.54 2.87 8.39 6.84 9.75.5.09.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.38-3.37-1.38-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1.01.07 1.54 1.07 1.54 1.07.9 1.58 2.35 1.12 2.92.86.09-.67.35-1.12.64-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.02-2.75-.1-.26-.44-1.3.1-2.71 0 0 .84-.27 2.75 1.05a9.38 9.38 0 0 1 2.5-.34c.85 0 1.7.11 2.5.34 1.91-1.32 2.75-1.05 2.75-1.05.54 1.41.2 2.45.1 2.71.63.72 1.02 1.63 1.02 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.38-.01 2.49-.01 2.82 0 .27.18.59.69.49C19.14 20.65 22 16.79 22 12.26 22 6.58 17.52 2 12 2Z"/>
+          </svg>
+          GitHub
+        </a>
+      </div>
+
+      <!-- Mobile hamburger -->
+      <button
+        class="hamburger"
+        id="hamburger"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="nav-mobile" id="mobile-menu" role="dialog" aria-label="Mobile navigation" hidden>
+      <nav>
+        <a href="#versions" class="mobile-link">Versions</a>
+        <a href="#roadmap" class="mobile-link">Roadmap</a>
+        <a href="#about" class="mobile-link">About</a>
+        <a href="https://github.com" class="mobile-link" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════
+         HERO
+    ════════════════════════════════════════════ -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+
+      <!-- Ambient background orbs -->
+      <div class="hero-orb hero-orb--a" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb--b" aria-hidden="true"></div>
+
+      <div class="container">
+
+        <p class="hero-eyebrow">Open Source · Plain HTML/CSS/JS</p>
+
+        <h1 class="hero-title" id="hero-title">
+          <span class="hero-title-line hero-title-line--thin">Body Stats</span>
+          <span class="hero-title-line hero-title-line--bold">Tracker</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Explore every iteration of the project and see how the application
+          evolved — one version at a time.
+        </p>
+
+        <!-- Project progress bar (signature element) -->
+        <div class="hero-progress" aria-label="Project completion">
+          <div class="hero-progress-labels">
+            <span class="hero-progress-label">Project Progress</span>
+            <span class="hero-progress-fraction">3 of 6 versions shipped</span>
+          </div>
+          <div class="hero-progress-track" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+            <div class="hero-progress-fill">
+              <!-- Live dots for each shipped version -->
+              <span class="progress-dot" aria-label="V0.1 shipped"></span>
+              <span class="progress-dot" aria-label="V0.2 shipped"></span>
+              <span class="progress-dot" aria-label="V0.3 shipped"></span>
+            </div>
+          </div>
+        </div>
+
+        <a href="#versions" class="btn btn-primary btn-lg hero-cta">
+          View All Versions
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 1 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+          </svg>
+        </a>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         VERSIONS GRID
+    ════════════════════════════════════════════ -->
+    <section class="section" id="versions" aria-labelledby="versions-title">
+      <div class="container">
+
+        <header class="section-header">
+          <h2 class="section-title" id="versions-title">All Versions</h2>
+          <p class="section-sub">Each build is self-contained and live. Click to open it in your browser.</p>
+        </header>
+
+        <!--
+          ╔══════════════════════════════════════════╗
+          ║  VERSION CARD TEMPLATE                   ║
+          ║                                          ║
+          ║  To add a new version, duplicate one     ║
+          ║  <article> block below and update:       ║
+          ║                                          ║
+          ║  • data-status  → "released" |           ║
+          ║                   "coming-soon" |        ║
+          ║                   "beta"                 ║
+          ║  • data-version → "0.7" (watermark)      ║
+          ║  • .version-chip text                    ║
+          ║  • .status-badge text                    ║
+          ║  • .card-name text                       ║
+          ║  • .card-desc text                       ║
+          ║  • <time datetime> and .card-date text   ║
+          ║  • href on .btn-open (or use <button>)   ║
+          ║                                          ║
+          ║  No CSS changes needed.                  ║
+          ╚══════════════════════════════════════════╝
+        -->
+        <div class="versions-grid" id="versions-grid">
+
+          <!-- ── V 0.1 — Released ── -->
+          <article class="version-card" data-status="released" data-version="0.1">
+            <div class="card-top">
+              <span class="version-chip">V 0.1</span>
+              <span class="status-badge">Released</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-name">The Foundation</h3>
+              <p class="card-desc">
+                Core measurement form with 10 body metrics, BMI,
+                Waist/Height, Shoulder/Waist and Chest/Waist ratios.
+                Full localStorage persistence with history and delete.
+              </p>
+            </div>
+            <div class="card-footer">
+              <time class="card-date" datetime="2025-01">January 2025</time>
+              <div class="card-actions">
+                <a href="../Versions/V-0.1%20Basic%20Structure/index.html" class="btn btn-primary btn-sm btn-open">Open Version</a>
+                <button class="btn btn-ghost btn-sm" disabled aria-disabled="true">View Changelog</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── V 0.2 — Released ── -->
+          <article class="version-card" data-status="released" data-version="0.2">
+            <div class="card-top">
+              <span class="version-chip">V 0.2</span>
+              <span class="status-badge">Released</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-name">Progress Comparison</h3>
+              <p class="card-desc">
+                Added a "Progress Since Last Entry" card comparing
+                Weight, Chest, Waist and Shoulder changes between
+                entries with green/red colour-coded indicators.
+              </p>
+            </div>
+            <div class="card-footer">
+              <time class="card-date" datetime="2025-01">January 2025</time>
+              <div class="card-actions">
+                <a href="../Versions/V-0.2%20Progress%20Comparison/index.html" class="btn btn-primary btn-sm btn-open">Open Version</a>
+                <button class="btn btn-ghost btn-sm" disabled aria-disabled="true">View Changelog</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── V 0.3 — Released ── -->
+          <article class="version-card" data-status="released" data-version="0.3">
+            <div class="card-top">
+              <span class="version-chip">V 0.3</span>
+              <span class="status-badge">Released</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-name">Dashboard Upgrade</h3>
+              <p class="card-desc">
+                Complete sidebar navigation, Analytics with progress bars,
+                Goals system with localStorage, 8 auto-unlocking
+                Achievements, and a full glassmorphism redesign.
+              </p>
+            </div>
+            <div class="card-footer">
+              <time class="card-date" datetime="2025-02">February 2025</time>
+              <div class="card-actions">
+                <a href="../Versions/V-0.3%20Dashboard%20Upgrade/index.html" class="btn btn-primary btn-sm btn-open">Open Version</a>
+                <button class="btn btn-ghost btn-sm" disabled aria-disabled="true">View Changelog</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── V 0.4 — Coming Soon ── -->
+          <article class="version-card" data-status="coming-soon" data-version="0.4">
+            <div class="card-top">
+              <span class="version-chip">V 0.4</span>
+              <span class="status-badge">Coming Soon</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-name">Goals &amp; Achievements</h3>
+              <p class="card-desc">
+                Advanced goal tracking with interactive progress charts,
+                daily streaks, detailed milestone system and
+                push notification support.
+              </p>
+            </div>
+            <div class="card-footer">
+              <time class="card-date">TBD</time>
+              <div class="card-actions">
+                <button class="btn btn-primary btn-sm btn-open" disabled aria-disabled="true">Coming Soon</button>
+                <button class="btn btn-ghost btn-sm" disabled aria-disabled="true">View Changelog</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── V 0.5 — Coming Soon ── -->
+          <article class="version-card" data-status="coming-soon" data-version="0.5">
+            <div class="card-top">
+              <span class="version-chip">V 0.5</span>
+              <span class="status-badge">Coming Soon</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-name">Progress Photos</h3>
+              <p class="card-desc">
+                Side-by-side visual comparisons with photo uploads,
+                date annotations, measurement overlays and
+                exportable before/after reports.
+              </p>
+            </div>
+            <div class="card-footer">
+              <time class="card-date">TBD</time>
+              <div class="card-actions">
+                <button class="btn btn-primary btn-sm btn-open" disabled aria-disabled="true">Coming Soon</button>
+                <button class="btn btn-ghost btn-sm" disabled aria-disabled="true">View Changelog</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── V 1.0 — Coming Soon (flagship) ── -->
+          <article class="version-card version-card--flagship" data-status="coming-soon" data-version="1.0">
+            <div class="card-top">
+              <span class="version-chip">V 1.0</span>
+              <span class="status-badge">Coming Soon</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-name">IMOGHARDER Fitness</h3>
+              <p class="card-desc">
+                The full product. A complete fitness platform with workout
+                plans, nutrition tracking, AI-driven insights,
+                and optional cloud sync.
+              </p>
+            </div>
+            <div class="card-footer">
+              <time class="card-date">TBD</time>
+              <div class="card-actions">
+                <button class="btn btn-primary btn-sm btn-open" disabled aria-disabled="true">Coming Soon</button>
+                <button class="btn btn-ghost btn-sm" disabled aria-disabled="true">View Changelog</button>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- /.versions-grid -->
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         ROADMAP
+    ════════════════════════════════════════════ -->
+    <section class="section section--alt" id="roadmap" aria-labelledby="roadmap-title">
+      <div class="container">
+
+        <header class="section-header">
+          <h2 class="section-title" id="roadmap-title">Roadmap</h2>
+          <p class="section-sub">From a minimal tracker to a full fitness platform.</p>
+        </header>
+
+        <ol class="roadmap" aria-label="Version roadmap">
+
+          <li class="roadmap-step" data-done="true">
+            <div class="roadmap-indicator" aria-hidden="true">
+              <div class="roadmap-dot"></div>
+              <div class="roadmap-line"></div>
+            </div>
+            <div class="roadmap-content">
+              <span class="roadmap-ver">V 0.1</span>
+              <span class="roadmap-desc">Core measurements, ratios &amp; localStorage</span>
+            </div>
+          </li>
+
+          <li class="roadmap-step" data-done="true">
+            <div class="roadmap-indicator" aria-hidden="true">
+              <div class="roadmap-dot"></div>
+              <div class="roadmap-line"></div>
+            </div>
+            <div class="roadmap-content">
+              <span class="roadmap-ver">V 0.2</span>
+              <span class="roadmap-desc">Progress comparison between entries</span>
+            </div>
+          </li>
+
+          <li class="roadmap-step" data-done="true">
+            <div class="roadmap-indicator" aria-hidden="true">
+              <div class="roadmap-dot"></div>
+              <div class="roadmap-line"></div>
+            </div>
+            <div class="roadmap-content">
+              <span class="roadmap-ver">V 0.3</span>
+              <span class="roadmap-desc">Dashboard, analytics, goals &amp; achievements</span>
+            </div>
+          </li>
+
+          <li class="roadmap-step">
+            <div class="roadmap-indicator" aria-hidden="true">
+              <div class="roadmap-dot"></div>
+              <div class="roadmap-line"></div>
+            </div>
+            <div class="roadmap-content">
+              <span class="roadmap-ver">V 0.4</span>
+              <span class="roadmap-desc">Richer goal charts and daily streaks</span>
+            </div>
+          </li>
+
+          <li class="roadmap-step">
+            <div class="roadmap-indicator" aria-hidden="true">
+              <div class="roadmap-dot"></div>
+              <div class="roadmap-line"></div>
+            </div>
+            <div class="roadmap-content">
+              <span class="roadmap-ver">V 0.5</span>
+              <span class="roadmap-desc">Progress photo comparisons and export</span>
+            </div>
+          </li>
+
+          <li class="roadmap-step roadmap-step--last">
+            <div class="roadmap-indicator" aria-hidden="true">
+              <div class="roadmap-dot roadmap-dot--final"></div>
+            </div>
+            <div class="roadmap-content">
+              <span class="roadmap-ver roadmap-ver--final">V 1.0</span>
+              <span class="roadmap-desc">IMOGHARDER — the complete fitness platform</span>
+            </div>
+          </li>
+
+        </ol>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         ABOUT
+    ════════════════════════════════════════════ -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about-card">
+
+          <h2 class="about-title" id="about-title">About This Project</h2>
+
+          <p class="about-text">
+            Body Stats Tracker started as a minimal body measurement logger and is
+            evolving one version at a time into a full fitness platform. Each release
+            is self-contained, fully functional, and live — so you can explore the
+            exact state of the app at any point in its development.
+          </p>
+
+          <p class="about-text">
+            Built entirely with plain HTML, CSS and JavaScript.
+            No frameworks, no databases, no cloud — just clean code that runs
+            entirely in the browser using localStorage.
+          </p>
+
+          <div class="about-chips" aria-label="Technologies used">
+            <span class="chip">HTML</span>
+            <span class="chip">CSS</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">localStorage</span>
+            <span class="chip">No Frameworks</span>
+            <span class="chip">Open Source</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main><!-- /main -->
+
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <span class="footer-brand">Body Stats Tracker</span>
+        <span class="footer-tagline">Built one version at a time.</span>
+      </div>
+      <div class="footer-right">
+        <p class="footer-copy">
+          &copy; 2025 &mdash; Made by <strong>Ayush</strong>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
